@@ -1,0 +1,78 @@
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 14px;
+  color: rgb(40, 0, 182);
+}
+
+.wrapper {
+  max-width: 858px;
+  margin: 0 auto;
+}
+
+.accordion__item__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion:hover .accordion__btn {
+  transition: 0.3s;
+  opacity: 1;
+  color: black;
+}
+
+.accordion__btn {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  background: url(../assets/plus.ico) center no-repeat;
+}
+
+.accordion__item {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 5px;
+}
+
+.accordion__item:hover .accordion__desc {
+  display: block;
+}
+
+.accordion__title {
+  display: block;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.accordion__desc {
+  display: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.input[type='radio'] {
+  background-size: 20px;
+  background: url(../assets/5f7c91808d6e37153030e743_Meme\ 19.png);
+  height: 16px;
+  width: 16px;
+  border: none;
+}
+
+.accordion__input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.accordion__input:checked ~ .accordion__desc {
+  display: block;
+}
