@@ -1,0 +1,153 @@
+:root {
+  --yellow: #fedb1f;
+}
+
+body {
+  font-family: 'Golos Text', sans-serif;
+  font-size: 0.8rem;
+  color: var(--yellow);
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 50vw;
+  max-height: 80vh;
+  margin: 0 auto;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2rem solid #f21011;
+  border-radius: 1.2rem;
+}
+
+.accordion__btn {
+  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.1rem;
+}
+
+@keyframes shows {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.accordion__desc {
+  display: none;
+}
+
+.accordion__title {
+  display: block;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.accordion__img {
+  display: block;
+  width: 40%;
+  height: 40%;
+  margin: 0.5rem auto;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked ~ .accordion__desc {
+  display: block;
+  animation: none;
+}
+
+.accordion__input:checked ~ h2 {
+  color: black;
+  background-color: var(--yellow);
+  transition: all 0.3s;
+}
+
+@media (hover: hover) {
+  .accordion:hover {
+    color: black;
+  }
+
+  .accordion:hover .accordion__btn {
+    transition: 0.4s;
+    opacity: 1;
+  }
+
+  h2:hover {
+    background-color: var(--yellow);
+    transition: all 0.3s;
+  }
+
+  .accordion__item:hover .accordion__desc {
+    margin: 0 auto;
+    display: block;
+    animation: shows ease-out 0.7s;
+  }
+
+  .accordion:hover .accordion__title:hover .accordion__btn {
+    display: block;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+
+  .accordion__input:checked ~ .accordion__desc {
+    display: block;
+    animation: none;
+  }
+}
+
+@media (max-width: 820px) {
+  body {
+    font-size: 0.6rem;
+  }
+
+  .wrapper {
+    max-width: 80vw;
+  }
+
+  .accordion__btn {
+    opacity: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .accordion__input:checked ~ h2 .accordion__btn {
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+
+  .accordion__input:checked ~ .accordion__desc {
+    display: block;
+    animation: shows 0.7s;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 0.4rem;
+  }
+
+  .wrapper {
+    max-width: 90vw;
+  }
+
+  .accordion__btn {
+    width: 1rem;
+    height: 1rem;
+  }
+}
