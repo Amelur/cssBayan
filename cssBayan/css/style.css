@@ -37,11 +37,11 @@ h2 {
 
 @keyframes shows {
   from {
-    opacity: 0;
+    width: 0%;
   }
 
   to {
-    opacity: 1;
+    width: 100%;
   }
 }
 
@@ -93,8 +93,9 @@ h2 {
   }
 
   .accordion__item:hover .accordion__desc {
+    margin: 0 auto;
     display: block;
-    animation: shows 1.5s;
+    animation: shows ease-out 0.7s;
   }
 
   .accordion:hover .accordion__title:hover .accordion__btn {
@@ -131,7 +132,8 @@ h2 {
 
   .accordion__input:checked ~ .accordion__desc {
     display: block;
-    animation: shows 1s;
+    animation: shows 0.7s;
+    margin: 0 auto;
   }
 }
 
