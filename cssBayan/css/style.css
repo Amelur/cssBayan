@@ -6,6 +6,7 @@ body {
   font-family: 'Golos Text', sans-serif;
   font-size: 0.8rem;
   color: var(--yellow);
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -94,12 +95,12 @@ h2 {
   .accordion__item:hover .accordion__desc {
     display: block;
     animation: shows 1.5s;
-    transition: all ease-out 0.5s;
   }
 
   .accordion:hover .accordion__title:hover .accordion__btn {
     display: block;
     transform: rotate(45deg);
+    transition: all 0.3s;
   }
 
   .accordion__input:checked ~ .accordion__desc {
@@ -130,7 +131,7 @@ h2 {
 
   .accordion__input:checked ~ .accordion__desc {
     display: block;
-    animation: all ease-out 2s;
+    animation: shows 1s;
   }
 }
 
